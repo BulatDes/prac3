@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/routes"
+    app:startDestination="@id/fragmentNews">
+
+    <fragment
+        android:id="@+id/fragmentDetectiv"
+        android:name="com.example.zd3_2up.FragmentDetectiv"
+        android:label="fragment_detectiv"
+        tools:layout="@layout/fragment_detectiv" />
+    <fragment
+        android:id="@+id/fragmentHoror"
+        android:name="com.example.zd3_2up.FragmentHoror"
+        android:label="fragment_horor"
+        tools:layout="@layout/fragment_horor" />
+    <fragment
+    android:id="@+id/fragmentSearch"
+    android:name="com.example.zd3_2up.FragmentSearch"
+    android:label="fragment_search"
+    tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/fragmentComedy"
+        android:name="com.example.zd3_2up.FragmentComedy"
+        android:label="fragment_comedy"
+        tools:layout="@layout/fragment_comedy" />
+    <fragment
+        android:id="@+id/fragmentNews"
+        android:name="com.example.zd3_2up.FragmentNews"
+        android:label="fragment_news"
+        tools:layout="@layout/fragment_news" >
+        <action
+            android:id="@+id/action_fragmentNews_to_fragmentDetectiv"
+            app:destination="@id/fragmentDetectiv" />
+        <action
+            android:id="@+id/action_fragmentNews_to_fragmentSearch"
+            app:destination="@id/fragmentSearch" />
+
+        <action
+            android:id="@+id/action_fragmentNews_to_fragmentHoror"
+            app:destination="@id/fragmentHoror" />
+
+        <action
+            android:id="@+id/action_fragmentNews_to_fragmentComedy"
+            app:destination="@id/fragmentComedy" />
+    </fragment>
+
+
+</navigation>
